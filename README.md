@@ -1,7 +1,7 @@
 giix-crud-advanced
 =============
 
-This repository contains yii code generator library based on giix.
+This repository contains a yii code generator library based on giix.
 
 Requirements
 ------------
@@ -14,6 +14,7 @@ Installation
 
 1. Clone repository in the 'extensions' folder of your yii application
 2. Add giix-advanced to the application configuration:
+
 ```php
 ...
 'gii'=>array(
@@ -22,3 +23,8 @@ Installation
         ),
 ...
 ```
+
+Features
+--------
+
+* No separation of index and admin view. Admin is the new index!
