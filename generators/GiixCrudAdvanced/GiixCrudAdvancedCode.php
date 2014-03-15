@@ -1,6 +1,6 @@
 <?php
 
-Yii::import('ext.giix.generators.giixCrud.GiixCrudCode');
+Yii::import('ext.giix.giix-core.giixCrud.GiixCrudCode');
 
 class GiixCrudAdvancedCode extends GiixCrudCode {
 

@@ -10,7 +10,7 @@
 class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseControllerClass; ?> {
 
 <?php 
-	$authpath = 'ext.giix.generators.giixCrud.templates.default.auth.';
+	$authpath = 'ext.giix-core.giixCrud.templates.default.auth.';
 	Yii::app()->controller->renderPartial($authpath . $this->authtype);
 ?>
 
@@ -80,19 +80,29 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
 			$this->loadModel($id, '<?php echo $this->modelClass; ?>')->delete();
 
 			if (!Yii::app()->getRequest()->getIsAjaxRequest())
-				$this->redirect(array('index'));
+				$this->redirect(array('admin'));
 		} else
 			throw new CHttpException(400, Yii::t('app', 'Your request is invalid.'));
 	}
 
 	public function actionIndex() {
+		/*
+        $dataProvider = new CActiveDataProvider('<?php echo $this->modelClass; ?>');
+		$this->render('index', array(
+			'dataProvider' => $dataProvider,
+		));
+        */
+        $this->actionAdmin();
+	}
+
+	public function actionAdmin() {
 		$model = new <?php echo $this->modelClass; ?>('search');
 		$model->unsetAttributes();
 
 		if (isset($_GET['<?php echo $this->modelClass; ?>']))
 			$model->setAttributes($_GET['<?php echo $this->modelClass; ?>']);
 
-		$this->render('index', array(
+		$this->render('admin', array(
 			'model' => $model,
 		));
 	}
