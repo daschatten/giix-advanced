@@ -1,4 +1,4 @@
-giix-crud-advanced
+giix-advanced
 =============
 
 This repository contains a yii code generator library based on giix.
