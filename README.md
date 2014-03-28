@@ -1,6 +1,17 @@
 giix-advanced
 =============
 
+DO NOT USE!
+
+Use https://github.com/daschatten/giixCrudTemplateAdminOnly instead.
+
+This approach is not working anymore because of too many and deep changes in giix.
+
+
+
+Old text
+========
+
 This repository contains a yii code generator library based on giix.
 
 Requirements
